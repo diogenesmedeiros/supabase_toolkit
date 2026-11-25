@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "supabase-toolkit"
+version = "1.0.0"
+description = "Auditor de superfície para Supabase"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+keywords = ["supabase", "postgrest", "rls", "security", "pentest", "auditor"]
+
+dependencies = [
+    "requests>=2.25",
+]
+
+[project.optional-dependencies]
+socks = ["PySocks>=1.7"]
+realtime = ["websocket-client>=1.5"]
+all = ["PySocks>=1.7", "websocket-client>=1.5"]
+
+[project.scripts]
+supabase-toolkit = "src.cli:run"
+
+[tool.setuptools]
+packages = ["src"]
+
+[tool.setuptools.package-data]
+src = []

@@ -1,0 +1,2 @@
+[console_scripts]
+supabase-toolkit = src.cli:run
